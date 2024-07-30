@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow-custom {
+	position: relative;
+	display: inline-block;
+}
+
+.shadow-custom::before,
+.shadow-custom::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.shadow-custom::before {
+	transform: scale(1.5);
+	background-color: #43d9ac9c;
+}
+.shadow-custom::after {
+	transform: scale(1.9);
+	background-color: #43d9ac6c;
+}
+
+.eaten.shadow-custom::before {
+	transform: scale(1.5);
+	background-color: rgba(67, 217, 172, 0.641);
+}
+.eaten.shadow-custom::after {
+	transform: scale(1.9);
+	background-color: #047f5867;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+	width: 20px;
+	border-left: 1px solid #6b7280;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+	padding: 3px !important;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #607b96;
+	height: 30px !important;
+	width: 100%;
+	margin: 2px;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+	background-color: #011221 !important;
+	color: #607b96 !important;
+}
+
+input:-webkit-autofill::first-line,
+textarea:-webkit-autofill::first-line {
+	color: #607b96 !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+	-webkit-box-shadow: 0 0 0 30px #011221 inset !important;
+	-webkit-text-fill-color: #607b96 !important;
+	transition: background-color 5000s ease-in-out 0s;
+}
