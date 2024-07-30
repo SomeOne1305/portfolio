@@ -15,7 +15,7 @@ export default function Navbar() {
 						<NavLink
 							key={item.title}
 							href={item.url}
-							className={`text-[#607B96] text-xl px-4 py-3 border-r border-gray-500 last:border-r-0 [&.active]:border-b-4 [&.active]:border-b-orange-400`}
+							className={`text-[#607B96] text-xl px-4 py-3 border-r border-gray-500 last:border-r-0 [&.active]:border-b-4 [&.active]:border-b-orange-400 text-nowrap`}
 						>
 							{item.title}
 						</NavLink>
@@ -25,11 +25,11 @@ export default function Navbar() {
 			<div className='inline-flex items-center lg:border-x border-gray-500'>
 				<NavLink
 					href={'/contact'}
-					className={`text-[#607B96] text-xl px-4 py-3 border-r border-gray-500 last:border-r-0 [&.active]:border-b-2 [&.active]:border-b-orange-400 hidden lg:block`}
+					className={`text-[#607B96] text-xl px-4 py-3 border-r border-gray-500 last:border-r-0 [&.active]:border-b-2 [&.active]:border-b-orange-400 hidden lg:block text-nowrap`}
 				>
 					_contact-me
 				</NavLink>
-				<FaBars className='text-3xl text-slate-100 mx-2 mr-3' />
+				<FaBars className='text-3xl text-slate-100 mx-2 mr-3 lg:hidden' />
 			</div>
 		</div>
 	)

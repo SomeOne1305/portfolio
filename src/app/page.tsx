@@ -9,7 +9,7 @@ export default function Home() {
 		<div className='w-full min-h-screen bg-mobMesh md:bg-mesh'>
 			<div className='container pt-10'>
 				<div className='w-full min-h-[95vh] flex items-center'>
-					<div className='w-full lg:w-1/2 p-5 h-full mb-[15%]'>
+					<div className='w-full xl:w-1/2 p-5 h-full mb-[15%]'>
 						<span className='text-white text-2xl md:text-3xl flex'>
 							Hi everyone
 							<div className='w-10 h-10 relative ml-3'>
@@ -55,7 +55,7 @@ export default function Home() {
 							></CodeBlock>
 						</div>
 					</div>
-					<div className='w-1/2 h-auto hidden lg:block'>
+					<div className='w-1/2 h-auto hidden xl:block'>
 						<Hero />
 					</div>
 				</div>
