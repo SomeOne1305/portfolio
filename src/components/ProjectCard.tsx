@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function ProjectCard() {
 	return (
-		<div className='flex flex-col'>
+		<div className='flex flex-col mt-3'>
 			<div className='w-full text-xl my-2'>
 				<span className='text-violet-600 font-bold'>Project 1</span>
 				<span className='text-gray-500'>{' //  '} _natlib-kumkurgan</span>

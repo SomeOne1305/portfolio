@@ -16,6 +16,8 @@ const config: Config = {
 					'radial-gradient(circle 57vh at 45.5% 65.1%, #43d9ac80 0px, transparent 45%),radial-gradient(circle 68vh at 55.7% 40.0%, #4d5cce98 0px, transparent 45%)',
 				mesh: 'radial-gradient(circle 45vw at 75.5% 54.1%, #43d9ac80 0px, transparent 45%),radial-gradient(circle 50vw at 65.7% 33.0%, #4d5cce98 0px, transparent 45%)',
 				back: 'linear-gradient(to left top, #43d9ac22, #175553 )',
+				maintenance:
+					'radial-gradient(circle 61vh at 41.5% 57.1%, #43d9ac80 0px, transparent 45%),radial-gradient(circle 73vh at 55.7% 40.0%, #4d5cce98 0px, transparent 45%)',
 			},
 			container: {
 				center: true,
