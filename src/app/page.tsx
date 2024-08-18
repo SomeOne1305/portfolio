@@ -20,7 +20,7 @@ export default function Home() {
 						</span>
 						<div className='w-full mt-[33%] lg:mt-[20%]'>
 							<span className='text-gray-400 text-xl'>
-								// Find my profile on Github
+								{'// Find my profile on Github'}
 							</span>
 							<br />
 							<p className='gap-2 text-xl mt-4'>
@@ -28,7 +28,7 @@ export default function Home() {
 								<span className='text-teal-500'>githubLink</span>
 								<span className='text-slate-200'> = </span>
 								<span className='text-orange-400 text-wrap'>
-									"https://github.com/SomeOne1305"
+									&quot;https://github.com/SomeOne1305&quot;
 								</span>
 							</p>
 						</div>
