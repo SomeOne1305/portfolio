@@ -1,8 +1,9 @@
 'use client'
-import 'swiper/css/keyboard'
+import 'swiper/css'
 import { Autoplay, Keyboard } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import CodeBlock from './common/CodeBlock'
+
 const code = `type Primitive = string | number | boolean | symbol | bigint | undefined | null;
 
 type DeepMergeTwoTypes<T, U> = (
@@ -14,34 +15,34 @@ type DeepMergeTwoTypes<T, U> = (
   U extends Record<string, any> ? DeepMerge<T, U> : T :
   T
 );
-
 `
+
 const VerticalSlider = () => {
 	return (
-		<div className='w-full mb-auto flex'>
+		<div className='w-full h-[85vh] flex'>
 			<Swiper
 				direction='vertical'
 				slidesPerView={2}
 				slidesPerGroup={1}
 				centeredSlides={true}
 				modules={[Keyboard, Autoplay]}
-				autoplay
-				keyboard
-				speed={1000}
-				style={{
-					height: '85vh',
-					transform: 'translateY(-100px)',
-				}}
+				autoplay={{ delay: 3000, disableOnInteraction: false }}
+				keyboard={{ enabled: true }}
+				speed={800}
 				onSlideChange={swiper => {
 					swiper.slides.forEach((slide, index) => {
-						slide.style.opacity = index === swiper.activeIndex ? '1' : '0.5'
-						slide.style.filter =
-							index === swiper.activeIndex ? 'none' : 'blur(2px)'
+						const isActive = index === swiper.activeIndex
+						slide.style.opacity = isActive ? '1' : '0.5'
+						slide.style.filter = isActive ? 'none' : 'blur(2px)'
 					})
+				}}
+				style={{
+					height: '100%',
+					transform: 'translateY(-50px)',
 				}}
 			>
 				{Array(10)
-					.fill('c')
+					.fill('')
 					.map((_, i) => (
 						<SwiperSlide key={'slide' + i}>
 							<CodeBlock code={code} language='tsx' />

@@ -1,8 +1,14 @@
 'use client'
 
+import { useState } from 'react'
 import Hero from '../components/Hero'
 
 export default function Home() {
+	// State to hold the animation delays
+	const [delays] = useState(
+		'Ahmadullo Kholmuminov'.split('').map((_, i) => 0.3 * i)
+	)
+
 	return (
 		<div className='w-full min-h-screen bg-mobMesh md:bg-mesh'>
 			<div className='container pt-10'>
@@ -11,8 +17,19 @@ export default function Home() {
 						<span className='text-white text-2xl md:text-3xl flex'>
 							Hi everyone 👋 . I am
 						</span>
-						<h1 className='text-white text-5xl md:text-5xl mt-6'>
-							Ahmadullo Kholmuminov
+						<h1 className='text-white text-5xl md:text-5xl mt-6 flex items-center'>
+							{'Ahmadullo Kholmuminov'.split(' ').map((item, index) => (
+								<span className='inline-flex mr-3' key={item + '_' + index}>
+									{item.split('').map((letter, ind) => (
+										<span
+											className='hover:animate-jelly-bounce hover:text-green-500 block cursor-pointer'
+											key={letter + ind}
+										>
+											{letter}
+										</span>
+									))}
+								</span>
+							))}
 						</h1>
 						<br />
 						<span className='text-2xl md:text-4xl text-teal-500 lg:text-violet-600'>
@@ -27,7 +44,7 @@ export default function Home() {
 								<span className='text-violet-600'>const </span>
 								<span className='text-teal-500'>githubLink</span>
 								<span className='text-slate-200'> = </span>
-								<span className='text-orange-400 text-wrap'>
+								<span className='text-orange-400 break-words'>
 									&quot;https://github.com/SomeOne1305&quot;
 								</span>
 							</p>

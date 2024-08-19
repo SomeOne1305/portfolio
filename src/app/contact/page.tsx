@@ -32,20 +32,20 @@ export default function ContactPage() {
 
 	return (
 		<div className='w-full h-screen flex items-start '>
-			<div className='w-[300px] h-screen border-r border-gray-500'>
+			<div className='w-[300px] h-screen border-r border-gray-500 hidden lg:block'>
 				<div className='w-full mt-[38px] py-2'></div>
 			</div>
 			<div className='w-full h-screen overflow-y-scroll custom-scrollbar'>
-				<div className='container ml-0 flex'>
-					<div className='w-1/2 py-2 mt-14'>
+				<div className='container max-sm:p-0 ml-0 flex lg:flex-row flex-col'>
+					<div className='w-full lg:w-1/2 py-2 mt-14'>
 						<Form />
 					</div>
-					<div className='w-1/2 border-l border-gray-600 py-2 mt-14 flex justify-center items-center pl-5'>
+					<div className='w-full lg:w-1/2 border-l border-gray-600 py-2 mt-14 flex justify-center items-center pl-5'>
 						<CodeBlock
 							code={code}
 							language='typescript'
 							lines={true}
-							size=' text-lg'
+							size=' text-lg max-sm:text-base'
 						/>
 					</div>
 				</div>

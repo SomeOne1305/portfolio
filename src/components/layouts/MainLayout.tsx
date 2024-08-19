@@ -13,6 +13,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
 				crawlSpeed={600}
 				easing='linear'
 				height={3}
+				showSpinner={false}
 				shadow={`0px 0px 5px 5px ${COLORS.teal},0px 0px 5px 5px ${COLORS.teal}`}
 			/>
 			<Navbar />

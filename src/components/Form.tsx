@@ -22,7 +22,7 @@ export default function Form() {
 	return (
 		<form
 			id='contact-form'
-			className='w-[440px] mx-auto flex flex-col items-center mt-[10%]'
+			className='w-[440px] max-xs:w-full p-2 mx-auto flex flex-col items-center mt-[10%]'
 			onSubmit={handleSubmit(onSubmit)}
 		>
 			<div className='w-full flex flex-col mt-3'>

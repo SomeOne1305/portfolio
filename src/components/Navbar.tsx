@@ -65,6 +65,13 @@ export default function Navbar() {
 									{tab.title}
 								</Link>
 							))}
+							<Link
+								href={'/contact'}
+								className='w-full  block border-y even:border-gray-500 px-4 py-3 text-[#607B96] text-xl'
+								onClick={() => setTimeout(() => setToggle(false), 400)}
+							>
+								_contact-me
+							</Link>
 						</div>
 						<div className='w-full border-t border-gray-500 py-5'>
 							find me in

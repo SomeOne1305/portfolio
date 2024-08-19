@@ -40,6 +40,19 @@ const config: Config = {
 			xl: '1280px',
 			'2xl': '1536px',
 		},
+		keyframes: {
+			'jelly-bounce': {
+				'0%, 100%': { transform: 'scale(1, 1) rotate(0deg)' },
+				'30%': { transform: 'scale(1.25, 0.75) rotate(3deg)' },
+				'40%': { transform: 'scale(0.75, 1.25) rotate(-3deg)' },
+				'50%': { transform: 'scale(1.15, 0.85) rotate(1deg)' },
+				'65%': { transform: 'scale(0.95, 1.05) rotate(-1deg)' },
+				'75%': { transform: 'scale(1.05, 0.95) rotate(0deg)' },
+			},
+		},
+		animation: {
+			'jelly-bounce': 'jelly-bounce 0.5s ease-in-out',
+		},
 	},
 	plugins: [],
 }
